@@ -75,7 +75,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-bounce 1 1s linear,
-    App-logo-spin infinite 20s ease-in 2s  
+    App-logo-spin infinite 20s ease 2s  
   }
 
 }
