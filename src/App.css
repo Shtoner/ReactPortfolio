@@ -48,6 +48,16 @@
 
 }
 
+a:link{
+  color: aquamarine;
+}
+a:hover{
+  color: rgb(21, 106, 17);
+}
+a:visited{
+  color: #fbab61;
+}
+
 .nav{
   position: fixed;
   display: flex;
