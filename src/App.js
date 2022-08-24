@@ -46,7 +46,7 @@ const Nav = () =>(
       <li className='linav'><NavLink to = '/'>Home </NavLink></li>
       <li className='linav'><NavLink to = '/About'>About </NavLink></li>
       <li className='linav'><NavLink to = '/Skills'>Skills </NavLink></li>
-      <li className='linav'><NavLink to = '/API'>API </NavLink></li>
+      <li className='linav'><NavLink to = '/News'>News </NavLink></li>
     </ul>
   </nav>
 )
@@ -55,7 +55,7 @@ const Main= ()=>(
     <Route  path='/' element={<Home/>}></Route>
     <Route  path='/About' element={<About/>}></Route>
     <Route  path='/Skills' element={<Skills/>}></Route>
-    <Route  path='/API' element={<API/>}></Route>
+    <Route  path='/News' element={<News/>}></Route>
   </Routes>
 )
 const Home= ()=>(
@@ -106,7 +106,7 @@ const Skills = () => (
   </div>
 )
 
-const API = () =>(
+const News = () =>(
   <div className='about'>
     <UsingFetch/>
   </div>
