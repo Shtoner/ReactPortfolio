@@ -14,7 +14,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-
+  overflow: hidden;
 }
 
 .App-logo {
@@ -52,10 +52,17 @@ a:link{
   color: aquamarine;
 }
 a:hover{
-  color: rgb(65, 243, 55);
+  color: rgb(5, 243, 55);
 }
 a:visited{
   color: #fbab61;
+}
+a:activated{
+  color: #6c15f7;
+}
+
+.apia{
+
 }
 
 .nav{

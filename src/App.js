@@ -1,6 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
 import {NavLink,Routes, Route} from 'react-router-dom'
+import React, { useEffect, useState } from "react"
+
+const UsingFetch = () => {
+  const [users, setUsers] = useState([])
+
+  const fetchData = () => {
+    fetch("https://newsapi.org/v2/everything?q=Apple&from=2022-08-23&sortBy=popularity&apiKey=fdc50ef68c3142daabe240e72b5d8329")
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        setUsers(data.articles)
+        console.log(data)
+      })
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const Conlog = ()=>{
+    console.log(users)
+  }
+
+  return (
+    <div>
+      <Conlog/>
+      {users.length > 0 && (
+        <ul className='apia'>
+          {users.map(user => (
+            <li key={user.title}><p>{user.title}</p><p><a href={user.url}>{user.url}</a></p> </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
 
 
 const Nav = () =>(
@@ -9,6 +46,7 @@ const Nav = () =>(
       <li className='linav'><NavLink to = '/'>Home </NavLink></li>
       <li className='linav'><NavLink to = '/About'>About </NavLink></li>
       <li className='linav'><NavLink to = '/Skills'>Skills </NavLink></li>
+      <li className='linav'><NavLink to = '/API'>API </NavLink></li>
     </ul>
   </nav>
 )
@@ -17,6 +55,7 @@ const Main= ()=>(
     <Route  path='/' element={<Home/>}></Route>
     <Route  path='/About' element={<About/>}></Route>
     <Route  path='/Skills' element={<Skills/>}></Route>
+    <Route  path='/API' element={<API/>}></Route>
   </Routes>
 )
 const Home= ()=>(
@@ -67,6 +106,11 @@ const Skills = () => (
   </div>
 )
 
+const API = () =>(
+  <div className='about'>
+    <UsingFetch/>
+  </div>
+)
 
 function App() {
   return (
