@@ -108,6 +108,8 @@ const Skills = () => (
 
 const News = () =>(
   <div className='about'>
+    <img src={logo} className="App-logo" alt="logo" />
+
     <UsingFetch/>
   </div>
 )
