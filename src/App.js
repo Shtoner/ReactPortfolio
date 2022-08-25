@@ -7,7 +7,7 @@ const UsingFetch = () => {
   const [users, setUsers] = useState([])
 
   const fetchData = () => {
-    fetch("https://newsapi.org/v2/everything?q=Apple&from=2022-08-23&sortBy=popularity&apiKey=fdc50ef68c3142daabe240e72b5d8329")
+    fetch("https://gnews.io/api/v4/top-headlines?lang=en&token=2154d2a046993b65994698e0d5f45ecb")
       .then(response => {
         return response.json()
       })
