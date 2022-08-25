@@ -80,7 +80,7 @@ const About = () => (
   <div className='about'>
     <img src={logo} className="App-logo" alt="logo" />
 
-    <h1>About Me</h1>
+    <h1 id='aboutH1'>About Me</h1>
     <p>I am a web developer who is ready to get to work building the best websites possible.</p>
     <p>I can build a responsive web experience tailored for different tasks through the use of React or vanilla JS, CSS, and HTML. Along with these basics, I can incorporate different libraries and software such as Three.js, Parallax.js, Cannon.js, Github to manage source control, and Blender to develop 3d models.</p>
     <p>What makes me valuable is that I'm always ready to learn something new!</p>
