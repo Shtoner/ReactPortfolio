@@ -109,7 +109,7 @@ const Skills = () => (
 const News = () =>(
   <div className='about'>
     <img src={logo} className="App-logo" alt="logo" />
-
+  <h3 className='hnews'>from Gnews api</h3>
     <UsingFetch/>
   </div>
 )
