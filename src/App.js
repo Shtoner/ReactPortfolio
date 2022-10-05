@@ -64,7 +64,7 @@ const Home= ()=>(
 
 <header className="App-header">
   <p>
-  This is my super professional website built with React.JS.
+  This is my portfolio website built with React.JS. Have a look around!
   </p>
   <a
     className="App-link"
