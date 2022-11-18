@@ -2,6 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import {NavLink,Routes, Route} from 'react-router-dom'
 import React, { useEffect, useState } from "react"
+import {
+  EthereumClient,
+  modalConnectors,
+  walletConnectProvider,
+} from "@web3modal/ethereum";
+import  WalletButton  from "./WALLETS.js";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+
 
 const UsingFetch = () => {
   const [users, setUsers] = useState([])
@@ -47,6 +55,7 @@ const Nav = () =>(
       <li className='linav'><NavLink to = '/About'>About </NavLink></li>
       <li className='linav'><NavLink to = '/Skills'>Skills </NavLink></li>
       <li className='linav'><NavLink to = '/News'>News </NavLink></li>
+      <li className='linav'><NavLink to = '/Donate'>Crypto </NavLink></li>
     </ul>
   </nav>
 )
@@ -56,6 +65,7 @@ const Main= ()=>(
     <Route  path='/About' element={<About/>}></Route>
     <Route  path='/Skills' element={<Skills/>}></Route>
     <Route  path='/News' element={<News/>}></Route>
+    <Route  path='/Donate' element={<Donate/>}></Route>
   </Routes>
 )
 const Home= ()=>(
@@ -82,7 +92,7 @@ const About = () => (
 
     <h1 id='aboutH1'>About Me</h1>
     <p>I am a web developer who is ready to get to work building the best websites possible.</p>
-    <p>I can build a responsive web experience tailored for different tasks through the use of React or vanilla JS, CSS, and HTML. Along with these basics, I can incorporate different libraries and software such as Three.js, Parallax.js, Cannon.js for physics,lil-gui,GSAP and TweenJS for animations,Github, Git to manage source control,BeautifulSoup for webscraping in Python or Node.JS for webscraping with Node, and Blender to develop 3d models.</p>
+    <p>I can build a responsive web experience tailored for different tasks through the use of React or vanilla JS, CSS, and HTML. Along with these basics, I can incorporate different libraries and software to accomplish tasks like a 3d world with simulated physics and movements, a site that reacts to the way you move your mouse and other inputs to catch the eye of the user, manage source control, webscrape, and develop 3d models and textures for them.</p>
     <p>What makes me valuable is that I'm always ready to learn and build something new!</p>
   </div>
 );
@@ -96,6 +106,8 @@ const Skills = () => (
       <li>Three.js</li>
       <li>Cannon.js</li>
       <li>Parallax.js</li>
+      <li>Ethers.js</li>
+      <li>Web3Modal</li>
       <li>Blender</li>
       <li>Github</li>
       <li>Git</li>
@@ -111,6 +123,14 @@ const News = () =>(
     <img src={logo} className="App-logo" alt="logo" />
   <h3 className='hnews'>from Gnews api</h3>
     <UsingFetch/>
+  </div>
+)
+
+const Donate = () =>(
+  <div className='about'>
+    <img src={logo} className="App-logo" alt="logo" />
+  <h3 className='hnews'>Help ya boii out!</h3>
+  <WalletButton/>
   </div>
 )
 

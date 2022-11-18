@@ -1,4 +1,4 @@
-import "./styles.css";
+// import "./styles.css";
 import { Web3Button } from "@web3modal/react";
 
 import {
@@ -15,7 +15,7 @@ const chains = [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum];
 
 // Wagmi client
 const { provider } = configureChains(chains, [
-  walletConnectProvider({ projectId: "<YOUR_PROJECT_ID>" })
+  walletConnectProvider({ projectId: "60e3bc71889b7fb0e7396eded3800afe" })
 ]);
 const wagmiClient = createClient({
   autoConnect: true,
@@ -33,14 +33,14 @@ function HomePage() {
 export default function WalletButton() {
   return (
     <>
-      <h2>Connect to your favorite and wallet</h2>
+      <h2>Connect to your favorite wallet</h2>
 
       <WagmiConfig client={wagmiClient}>
         <HomePage />
       </WagmiConfig>
 
       <Web3Modal
-        projectId="<YOUR_PROJECT_ID>"
+        projectId="60e3bc71889b7fb0e7396eded3800afe"
         theme="dark"
         accentColor="default"
         ethereumClient={ethereumClient}
