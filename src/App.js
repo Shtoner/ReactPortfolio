@@ -8,6 +8,7 @@ import {
   walletConnectProvider,
 } from "@web3modal/ethereum";
 import  WalletButton  from "./WALLETS.js";
+import  SendTransaction  from "./sendTransaction.";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 
 
@@ -30,7 +31,7 @@ const UsingFetch = () => {
   }, [])
 
   const Conlog = ()=>{
-    console.log(users)
+    // console.log(users)
   }
 
   return (
@@ -130,7 +131,10 @@ const Donate = () =>(
   <div className='about'>
     <img src={logo} className="App-logo" alt="logo" />
   <h3 className='hnews'>Help ya boii out!</h3>
+  <h2>Ethereum and Polygon Address: 0x04bfB47A43449856c5664c1b46557C60B8cCcf71</h2>
   <WalletButton/>
+  {/* <button onClick={console.log(isOpen)}></button> */}
+  
   </div>
 )
 

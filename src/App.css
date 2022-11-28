@@ -132,6 +132,10 @@ margin-top:1em;
   color: #61dafb;
 }
 
+#nomargin{
+  margin:0px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg) ;
