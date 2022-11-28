@@ -20,6 +20,7 @@ export function SendTransaction() {
 const chain= useNetwork()
 const { chains, error, pendingChainId, switchNetwork } =
 useSwitchNetwork()
+console.log(chain.name)
  const { config } = usePrepareSendTransaction({
  request: {
  to: debouncedTo,
