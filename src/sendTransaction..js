@@ -35,6 +35,7 @@ useSwitchNetwork()
 
  return (
     <>
+    <h2>This form allows you to send transactions by specifying public address and wallet</h2>
  <form
  onSubmit={(e) => {
  e.preventDefault()
