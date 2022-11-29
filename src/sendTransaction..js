@@ -39,7 +39,7 @@ function Forms(){
         })
  return (
     <>
-    <h2>This form allows you to send transactions by specifying public address and wallet</h2>
+    <h2>This form allows you to send transactions by specifying public address and wallet(style coming soon)</h2>
  <form
  onSubmit={(e) => {
  e.preventDefault()
