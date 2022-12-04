@@ -12,10 +12,14 @@ import { Web3Modal } from "@web3modal/react";
 import { chain, configureChains, createClient, WagmiConfig, useAccount,useConnect,useDisconnect,useEnsAvatar,useEnsName } from "wagmi";
 import App from './chainstest'
 import { SendTransaction } from './sendTransaction.';
+
+// import * as dotenv from 'dotenv'
+// dotenv.config( 'path: keys/var.env')
+const connectionString = (process.env.REACT_APP_WalletConnectID)
 const chains = [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum];
 // Wagmi client
 const { provider } = configureChains(chains, [
-  walletConnectProvider({ projectId: "60e3bc71889b7fb0e7396eded3800afe" })
+  walletConnectProvider({ projectId: connectionString })
 ]);
 const wagmiClient = createClient({
   autoConnect: true,

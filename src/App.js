@@ -11,12 +11,14 @@ import  WalletButton  from "./WALLETS.js";
 import  SendTransaction  from "./sendTransaction.";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 
+const connect= process.env.REACT_APP_GNEWS
+console.log(connect)
 
 const UsingFetch = () => {
   const [users, setUsers] = useState([])
 
   const fetchData = () => {
-    fetch("https://gnews.io/api/v4/top-headlines?lang=en&token=2154d2a046993b65994698e0d5f45ecb")
+    fetch(connect)
       .then(response => {
         return response.json()
       })
