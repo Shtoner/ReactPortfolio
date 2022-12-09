@@ -1,3 +1,4 @@
+## This website uses animations, a news API, and a crypto option to connect your wallet and send ETH,Polygon, and a couple others.
 ## Available Scripts
 
 In the project directory, you can run:
