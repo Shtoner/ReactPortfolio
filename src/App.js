@@ -51,17 +51,41 @@ const UsingFetch = () => {
 }
 
 
-const Nav = () =>(
+const Nav = () =>{
+  const [navbarOpen, setNavbarOpen] = useState(false)
+
+  const handletoggle=()=>{
+    setNavbarOpen(prev => !prev)
+    console.log(navbarOpen)
+  }
+
+  return(
+  <>
+  
   <nav className='nav'>
-    <ul>
+    <button className="App-logo2"onClick={handletoggle}>
+      {navbarOpen ? 
+          <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+          <li ><NavLink to = '/'>Home </NavLink></li>
+          <li ><NavLink to = '/About'>About </NavLink></li>
+          <li ><NavLink to = '/Skills'>Skills </NavLink></li>
+          <li ><NavLink to = '/News'>News </NavLink></li>
+          <li ><NavLink to = '/Donate'>Crypto </NavLink></li>
+        </ul>
+      :
+     <img src={logo} className="App-logo" alt="logo" />}
+  </button>
+    <ul >
       <li className='linav'><NavLink to = '/'>Home </NavLink></li>
       <li className='linav'><NavLink to = '/About'>About </NavLink></li>
       <li className='linav'><NavLink to = '/Skills'>Skills </NavLink></li>
       <li className='linav'><NavLink to = '/News'>News </NavLink></li>
       <li className='linav'><NavLink to = '/Donate'>Crypto </NavLink></li>
     </ul>
+
   </nav>
-)
+  </>)
+}
 const Main= ()=>(
   <Routes>
     <Route  path='/' element={<Home/>}></Route>
@@ -91,7 +115,7 @@ const Home= ()=>(
 )
 const About = () => (
   <div className='about'>
-    <img src={logo} className="App-logo" alt="logo" />
+  <img src={logo} className="App-logo" alt="logo" />
 
     <h1 id='aboutH1'>About Me</h1>
     <p>I am a web developer who is ready to get to work building the best websites possible.</p>
@@ -141,6 +165,8 @@ const Donate = () =>(
 )
 
 function App() {
+  const [navbarOpen, setNavbarOpen] = useState(false)
+
   return (
     <div className='App'>
       <Nav/>
