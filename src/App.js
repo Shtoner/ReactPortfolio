@@ -139,7 +139,7 @@ const Skills = () => (
       <li>Github</li>
       <li>Git</li>
       <li>Vercel</li>
-      <li>*Webscraping</li>
+      <li>Webscraping</li>
       <li>*Python</li>
     </ul>
   </div>
