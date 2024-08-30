@@ -156,7 +156,7 @@ const News = () =>(
 const Donate = () =>(
   <div className='about'>
     <img src={logo} className="App-logo" alt="logo" />
-  <h3 className='hnews'>Help ya boii out!</h3>
+  <h3 className='hnews'>Any Potential Donations Appreciated!</h3>
   <h2>Ethereum and Polygon Address: 0x04bfB47A43449856c5664c1b46557C60B8cCcf71</h2>
   <WalletButton/>
   {/* <button onClick={console.log(isOpen)}></button> */}
